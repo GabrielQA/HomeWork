@@ -28,7 +28,10 @@
   <td><?php echo $value->usu_nombres; ?></td>
   <td><?php echo $value->usu_apellidos; ?></td>
   <td><?php echo $value->usu_correo; ?></td>
-    <td>...</td>
+   <td>
+    <a href="<?php echo base_url('usuario/delete')."/".$value->usu_id; ?>">Eliminar</a>
+    <a href="<?php echo base_url('usuario/edit')."/".$value->usu_id; ?>">Editar</a>
+    </td>
 
   </tr>
   <?php }?>
@@ -73,7 +76,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Registrar Usuario</button>
         </form>
- </div>
+ 
 </div>
 <?php
         print_r($selPerfil);
